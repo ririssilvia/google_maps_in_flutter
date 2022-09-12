@@ -2,15 +2,28 @@
 
 A new Flutter project.
 
-## Getting Started
+## Menambahkan plugin Google Maps Flutter sebagai dependensi
+Pada praktikum ini menambahkan plugin Google Maps Flutter dengan menjalankan perintah berikut 
+```
+$ flutter pub add google_maps_flutter
+```
 
-This project is a starting point for a Flutter application.
+### Mengkonfigurasi minSDK Android
+Untuk menggunakan Google Maps SDK di Android, tetapkan minSDK ke 20. Ubah android/app/build.gradle sebagai berikut.
+![plot](images/4.png)
 
-A few resources to get you started if this is your first Flutter project:
+### Menambahkan kunci API untuk aplikasi Android
+Untuk menambahkan kunci API ke aplikasi Android, edit file AndroidManifest.xml di android/app/src/main. Tambahkan satu entri meta-data yang berisi kunci API yang dibuat pada langkah sebelumnya di dalam node application.
+![plot](images/5.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Menampilkan Maps di layar
+menampilkan Maps di layar. Update lib/main.dart
+![plot](images/1.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Menempatkan Google di Peta
+Pada Langkah ini menggunakan tiga dependensi Flutter baru ke project sebagai berikut. Pertama, paket http,kedua json_serializable untuk mendeklarasikan struktur objek agar merepresentasikan dokumen JSON, Terakhir  build_runner sebagai dependensi waktu pengembangan
+![plot](images/2.png)
+
+### Tugas Praktikum
+Buatlah aplikasi flutter yang dapat menampilkan peta dan beri tanda (marker) posisi rumah atau tempat tinggal Anda masing-masing!
+![plot](images/3.png)
